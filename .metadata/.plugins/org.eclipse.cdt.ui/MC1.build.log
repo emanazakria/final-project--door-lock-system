@@ -1,0 +1,82 @@
+20:45:55 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../micro_config.h:17,
+                 from ../keypad.h:17,
+                 from ../keypad.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:17,
+                 from ../lcd.h:18,
+                 from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:168: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:17,
+                 from ../lcd.h:18,
+                 from ../main.h:5,
+                 from ../main.c:19:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:58: warning: implicit declaration of function 'KeyPad_getPressedKey'
+Finished building: ../main.c
+ 
+Building file: ../timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"timer.d" -MT"timer.o" -c -o "timer.o" "../timer.c"
+In file included from ../micro_config.h:17,
+                 from ../timer.h:7,
+                 from ../timer.c:2:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../timer.c: In function 'Timer0_Overflow_CallBack':
+../timer.c:187: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer0_Compare_CallBack':
+../timer.c:196: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer1_Overflow_CallBack':
+../timer.c:205: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer1_Compare_CallBack':
+../timer.c:213: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer2_Overflow_CallBack':
+../timer.c:223: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer2_Compare_CallBack':
+../timer.c:232: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega16 -o "MC1.elf"  ./keypad.o ./lcd.o ./main.o ./timer.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10048 bytes (61.3% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (4.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:45:58 Build Finished. 0 errors, 12 warnings. (took 3s.532ms)
+

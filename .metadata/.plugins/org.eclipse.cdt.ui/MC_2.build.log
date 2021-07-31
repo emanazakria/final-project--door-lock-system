@@ -1,0 +1,13 @@
+15:18:04 **** Incremental Build of configuration Debug for project MC_2 ****
+make all 
+'Building file: ../UART.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+process_begin: CreateProcess(NULL, avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MFUART.d -MTUART.o -c -o UART.o ../UART.c, ...) failed.
+make (e=2): The system cannot find the file specified.
+
+make: *** [subdir.mk:32: UART.o] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.
+
+15:18:05 Build Failed. 1 errors, 0 warnings. (took 447ms)
+

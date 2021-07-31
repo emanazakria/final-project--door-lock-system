@@ -1,0 +1,10 @@
+15:18:11 **** Incremental Build of configuration Debug for project MC_1 ****
+make all 
+'Invoking: Print Size'
+avr-size --format=berkeley -t MC_1.elf
+process_begin: CreateProcess(NULL, avr-size --format=berkeley -t MC_1.elf, ...) failed.
+make (e=2): The system cannot find the file specified.
+
+make: [makefile:58: sizedummy] Error 2 (ignored)
+'Finished building: sizedummy'
+' '
